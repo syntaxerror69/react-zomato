@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import Fooddata from './FoodData'
+import Set from './Set'
 
 const Search = () => {
     const [fdata, setFdata] = useState(Fooddata)
@@ -44,8 +45,9 @@ const Search = () => {
                 <h1 className='text-4xl justify-start items-start px-12 py-4'>Restaurent in Mumbai Open Now</h1>
             </div>
             <div>
-               {copydata && copydata.length ?  <Card Fooddata={copydata}/> : "empty"}
+               {copydata && copydata.length ?  <Card Fooddata={copydata}/> : <Set sdata={fdata}/>}
             </div>
+            
         </div>
         
     )
